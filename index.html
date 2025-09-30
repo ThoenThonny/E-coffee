@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,77 +8,11 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <style>
-    body {
-      height: auto;
-      width: 100%;
-    }
-
-    .header {
-      width: 100%;
-      height: 12vh;
-      transition: background 0.3s ease;
-    }
-
-    /* Hero Image Styling */
-    .hero-img {
-      height: 100vh; /* full screen */
-      object-fit: cover;
-    }
-
-    /* Overlay for captions */
-    .carousel-caption {
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 20px;
-    }
-
-    /* Responsive Typography */
-    .carousel-caption h1 {
-      font-size: clamp(1.5rem, 5vw, 3rem);
-    }
-
-    .carousel-caption p {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-    }
-
-    /* Buttons */
-    .carousel-caption .btn {
-      font-size: clamp(0.9rem, 2.5vw, 1rem);
-      border-radius: 25px;
-    }
-
-   
-    .hero-img {
-  height: 100vh; /* default for desktop */
-  object-fit: cover;
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .hero-img {
-    height: 70vh;
-  }
-}
-
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .hero-img {
-    height: 50vh;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1600px) {
-  .hero-img {
-    height: 90vh;
-  }
-}
-  </style>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <!-- Header -->
   <nav class="header navbar bg-body-tertiary fixed-top navbar-expand-lg px-md-3">
@@ -131,8 +66,7 @@
     <div class="carousel-inner">
       <!-- Slide 1 -->
       <div class="carousel-item active" data-bs-interval="4000">
-        <img
-          src="https://t4.ftcdn.net/jpg/02/25/62/33/360_F_225623331_iICi8zkkePrkyIZgW6wtjfLNOOXO2kya.jpg"
+        <img src="https://t4.ftcdn.net/jpg/02/25/62/33/360_F_225623331_iICi8zkkePrkyIZgW6wtjfLNOOXO2kya.jpg"
           class="d-block w-100 hero-img" alt="Coffee Image 1">
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
           <h1 class="fw-bold display-5 text-white">Welcome to <span class="text-warning">E-Coffee</span></h1>
@@ -146,8 +80,7 @@
 
       <!-- Slide 2 -->
       <div class="carousel-item" data-bs-interval="4000">
-        <img
-          src="https://t4.ftcdn.net/jpg/07/91/58/73/360_F_791587301_dgaQ2huSmICtaGi5LNETbn8QS17xexkZ.jpg"
+        <img src="https://t4.ftcdn.net/jpg/07/91/58/73/360_F_791587301_dgaQ2huSmICtaGi5LNETbn8QS17xexkZ.jpg"
           class="d-block w-100 hero-img" alt="Coffee Image 2">
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
           <h1 class="fw-bold display-5 text-white">Specialty Coffee</h1>
@@ -176,7 +109,152 @@
     </button>
   </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Menu -->
+
+ <div id="menu" class=" container-fluid my-5">
+  <h2 class=" mb-4 fw-bold">- E-Coffee Menu</h2>
+  <div class="row g-4">
+    <!-- Item 1 -->
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card h-100">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/iced-latte-30188f7.jpg?quality=90&resize=440,400"
+          class="card-img-top img-fixed" alt="Ice Latte">
+        <div class="card-body ">
+          <h5 class="card-title">Ice Latte</h5>
+          <p class="card-text">Chilled espresso with milk served over ice.</p>
+          <p class="fw-bold">2.50$</p>
+          <a href="#" class="btn btn-warning w-100">Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card h-100">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
+          class="card-img-top img-fixed" alt="Espresso">
+        <div class="card-body  ">
+          <h5 class="card-title">Espresso</h5>
+          <p class="card-text">Rich, bold Italian-style concentrated coffee shot.</p>
+          <p class="fw-bold">1.80$</p>
+          <a href="#" class="btn btn-warning w-100">Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card h-100">
+        <img src="https://lorcoffee.com/cdn/shop/articles/Cappuccino-exc.jpg?v=1684870907"
+          class="card-img-top img-fixed" alt="Cappuccino">
+        <div class="card-body">
+          <h5 class="card-title">Cappuccino</h5>
+          <p class="card-text">Espresso topped with steamed milk & foamy cream.</p>
+          <p class="fw-bold">3.00$</p>
+          <a href="#" class="btn btn-warning w-100">Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card h-100">
+        <img src="https://cdn.loveandlemons.com/wp-content/uploads/2025/06/strawberry-banana-smoothie.jpg"
+          class="card-img-top img-fixed" alt="Smoothie">
+        <div class="card-body ">
+          <h5 class="card-title">Strawberry Smoothie</h5>
+          <p class="card-text">Fresh strawberries blended into a creamy drink.</p>
+          <p class="fw-bold">3.50$</p>
+          <a href="#" class="btn btn-warning w-100">Add to cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- App Download -->
+<div id="app" class="container my-5">
+  <h2 class="text-center mb-3 fw-bold">Download App With</h2>
+  <p class="text-center fs-5 text-muted mb-4">
+    Get your favorite coffee delivered faster, earn rewards, and enjoy exclusive offers by downloading our mobile app.
+  </p>
+
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+    <!-- Google Play -->
+    <a href="#" target="_blank">
+      <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" 
+           alt="Google Play" class="store-btn">
+    </a>
+
+    <!-- App Store -->
+    <a href="#" target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt2AB63zv7sETfbkjYyM2ZmTT6eVYF1eGP1Q&s" 
+           alt="App Store" class="store-btn">
+    </a>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer id="contact" class="bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- About -->
+      <div class="col-12 col-md-4">
+        <h4 class="fw-bold"><i>E-Coffee</i></h4>
+        <p class="">
+          Brewing happiness in every cup ☕.  
+          Fresh coffee, fast delivery, and a cozy experience anytime.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-6 col-md-2">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="#menu" class="text-light text-decoration-none">Menu</a></li>
+          <li><a href="#app" class="text-light text-decoration-none">App</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-6 col-md-3">
+        <h5 class="fw-bold">Contact</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-geo-alt-fill me-2"></i> Phnom Penh, Cambodia</li>
+          <li><i class="bi bi-telephone-fill me-2"></i> +855 96 340 3471</li>
+          <li><i class="bi bi-envelope-fill me-2"></i> support@ecoffee.com</li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="col-12 col-md-3">
+        <h5 class="fw-bold">Follow Us</h5>
+        <div class="d-flex gap-3 fs-4">
+          <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="my-4 border-light">
+
+    <!-- Bottom Bar -->
+    <div class="text-center pb-3">
+      <p class="mb-0">&copy; 2025 <i>E-Coffee</i>. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
 </body>
+
 </html>
