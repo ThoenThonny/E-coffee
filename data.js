@@ -21,6 +21,7 @@ const Displayproducts = (products = cart) => {
   })
   document.getElementById("show-product").innerHTML = show
   Updatetocart()
+ 
 }
 
 fetch("https://thoenthonny.github.io/Coffee-Api/data.json")
@@ -58,7 +59,11 @@ const AddtoCart =(productId)=>{
     }else{
       cartItem.push({...product,qty:1})
     }
-    alert(`${product.name} Add to cart`)
+    Swal.fire({
+  title: `${product.name} Add Your Cart`,
+  icon: "success",
+  draggable: true
+});
     Updatetocart()
 }
 
@@ -93,9 +98,9 @@ const Updatetocart = () => {
           <h6 class="mb-0">${item.name}</h6>
           <small class="text-muted">${item.price}$</small>
           <div class="d-flex align-items-center mt-1">
-            <button class="btn btn-sm btn-outline-secondary" onclick="changeQty(${item.id}, -1)">-</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="UpdateQty(${item.id}, -1)">-</button>
             <input type="text" class="form-control form-control-sm text-center mx-1" value="${item.qty}" style="width: 45px;" readonly>
-            <button class="btn btn-sm btn-outline-secondary" onclick="changeQty(${item.id}, 1)">+</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="UpdateQty(${item.id}, 1)">+</button>
           </div>
         </div>
         <div class="d-flex flex-column align-items-end ms-2">
@@ -126,8 +131,39 @@ const Updatetocart = () => {
         <span>Total</span>
         <span>$${total.toFixed(2)}</span>
       </div>
-      <button class="btn btn-warning w-100 mt-3">Proceed to Checkout</button>
+      <button onclick="CheckOut()" class="btn btn-warning w-100 mt-3">Proceed to Checkout</button>
     </div>`;
 
   itemtocart.innerHTML = show;
 };
+
+// update qty
+
+const UpdateQty = (productId,chang) =>{
+    const item = cartItem.find(i => i.id === productId);
+    if(item){
+      item.qty+=chang
+      if(item.qty<1){
+        RemoveFromCart(productId)
+      }else{
+        Updatetocart();
+      }
+    }
+}
+// Remove From Card
+const RemoveFromCart = (productId)=>{
+  cartItem=cartItem.filter(i =>i.id !==productId);
+  Updatetocart();
+}
+
+// CheckOut
+const CheckOut = ()=>{
+  
+  Swal.fire({
+  title: "Thank For Order",
+  text: "Nice To Meet You!",
+  icon: "success"
+});
+cartItem=[]
+  Updatetocart()
+}
